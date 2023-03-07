@@ -7,17 +7,14 @@ import ru.skillbox.dto.Person;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) throws IOException, URISyntaxException {
+    public static void main(String[] args) throws IOException {
         //читаем файл из папки resources
-        String json = Files.readString(Paths.get("personModified.json"));
+        String json = Files.readString(Paths.get("person.json"));
 
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule());
